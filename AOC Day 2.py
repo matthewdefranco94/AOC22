@@ -7,42 +7,49 @@ x , y , z = 1 , 2 , 3
 
 l , d , w = 0 , 3 , 5
 
-sumScore = []
+"""x = l
+y = d
+z = w"""
 
-for p in f:
-    
-    p.split('\n\n')
-    m = p.replace(" ","")
+
+"""
+PART 2-------------------------------------------------------
+"""
+sumScoreP2 = []
+for pc in f:
+    pc.split('\n\n')
+    m = pc.replace(" ","")
     f = list(m)
-    myChoice = {"X" : 1 , "Y" : 2 , "Z" : 3}
+
+    myChoice = {"X" : 0 , "Y" : 3 , "Z" : 6}
 
     if(f[0] == "A" and f[1] == "X"):
         score = 3 + myChoice["X"]
-        sumScore.append(score)
+        sumScoreP2.append(score)
     elif(f[0] == "A" and f[1] == "Y"):
-        score = 6 + myChoice["Y"]
-        sumScore.append(score)
+        score = 1 + myChoice["Y"]
+        sumScoreP2.append(score)
     elif(f[0] == "A" and f[1] == "Z"):
-        score = 0 + myChoice["Z"]
-        sumScore.append(score)
+        score = 2 + myChoice["Z"]
+        sumScoreP2.append(score)
     elif(f[0] == "B" and f[1] == "X"):
-        score = 0 + myChoice["X"]
-        sumScore.append(score)
+        score = 1 + myChoice["X"]
+        sumScoreP2.append(score)
     elif(f[0] == "B" and f[1] == "Y"):
-        score = 3 + myChoice["Y"]
-        sumScore.append(score)
+        score = 2 + myChoice["Y"]
+        sumScoreP2.append(score)
     elif(f[0] == "B" and f[1] == "Z"):
-        score = 6 + myChoice["Z"]
-        sumScore.append(score)
-    elif(f[0] == "C" and f[1] == "X"):
-        score = 6 + myChoice["X"]
-        sumScore.append(score)
-    elif(f[0] == "C" and f[1] == "Y"):
-        score = 0 + myChoice["Y"]
-        sumScore.append(score)
-    else:
         score = 3 + myChoice["Z"]
-        sumScore.append(score)
+        sumScoreP2.append(score)
+    elif(f[0] == "C" and f[1] == "X"):
+        score = 2 + myChoice["X"]
+        sumScoreP2.append(score)
+    elif(f[0] == "C" and f[1] == "Y"):
+        score = 3 + myChoice["Y"]
+        sumScoreP2.append(score)
+    else:
+        score = 1 + myChoice["Z"]
+        sumScoreP2.append(score)
 
-print(sum(sumScore))
+print(sum(sumScoreP2))
 
