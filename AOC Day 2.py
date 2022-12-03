@@ -2,14 +2,11 @@ f = [male.strip() for male in open("AOCDay2.txt" , "r")]
 
 
 #R , P , S
-a , b , c = 1 , 2 , 3
-x , y , z = 1 , 2 , 3
+#R > S > P > R
 
-l , d , w = 0 , 3 , 5
+opChoices = {"A" : 1 , "B" : 2, "C" : 3}
+myChoices = {"X" : 1 , "Y" : 2 , "Z" : 3}
 
-"""x = l
-y = d
-z = w"""
 
 
 """
