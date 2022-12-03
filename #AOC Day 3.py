@@ -4,8 +4,6 @@ f = [male.strip() for male in open("AOCDay3.txt" , "r")]
 #a-z =  1 - 26 , a = 97
 #A-Z = 27 - 52
 #A = 65
-firstHalves = []
-secondHalves = []
 
 """
 PART 2
@@ -33,6 +31,8 @@ print(sum(meth))
 """
 PART 1
 """
+firstHalves = []
+secondHalves = []
 for pc in f:
     n = list(pc)
     la = int(len(n) / 2)
@@ -41,6 +41,8 @@ for pc in f:
     
     firstHalves.append(frontHalf)
     secondHalves.append(backHalf)
+
+print(firstHalves)
 
 matches = []
 for i in range(len(firstHalves)):
@@ -56,3 +58,4 @@ for m in matches:
         else:
             mum = ord(p) - 96
         convert.append(mum)
+print(sum(convert))
